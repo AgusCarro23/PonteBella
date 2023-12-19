@@ -1,0 +1,127 @@
+/* REINICIO DE ESTILO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300&family=Sacramento&family=Source+Sans+Pro:wght@200&display=swap');
+
+/* Cambios basicos */
+
+body {	
+		font-family: 'Source Sans Pro', sans-serif;
+		height: 100%;
+	}
+
+a {
+        font-style: none;
+        text-decoration: none;
+    }
+
+nav {
+    background-color: #232323;
+    
+}
+
+
+
+header nav ul li{
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 164px;
+    background-color: #232323;
+}
+
+
+.footerLogo img{
+    padding-left: 5%;
+    width: 40%;
+}
+
+.footerMedia {
+    width: 30%;
+}
+
+.footerMedia a {
+    padding: 5%;
+}
+
+
+.footerAdress {
+    width: 30%;
+}
+
+.banner {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+SOBRE NOSOTROS
+/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#sobreNosotros {
+    background-image: url(../img/background/clouds.jpg);
+    background-color: #FDCDCD;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+}
+
+.personas {
+    padding:5%;
+    display: flex;
+    align-items: center;
+}
+
+.personas img {
+    /*display: inline-block;*/
+    border: 1.5vh solid #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.personasTexto {
+    /*display: inline-block;*/
+    padding: 5% 0 5% 5%;
+    width: 59%;
+
+
+}
+
+.personasTexto h2 {
+    padding: 10px;
+    font-family: 'Quicksand', 'sans-serif';
+    font-size: 250%;
+}
+
+.personasTexto p {
+    padding: 10px;
+    text-align: justify;
+    font-family:'sans-serif', 'Calibri';
+    font-size: 100%;
+}
+
