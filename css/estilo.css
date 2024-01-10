@@ -30,12 +30,16 @@ nav {
 }
 
 
+nav ul {
+    margin:0%;
+}
 
 header nav ul li{
     display: inline-block;
     padding: 20px;
     color: white;
     font-family: 'Quicksand', 'sans-serif';
+
 }
 
 
@@ -165,6 +169,7 @@ SOBRE NOSOTROS
     padding: 10px;
     font-family: 'Quicksand', 'sans-serif';
     font-size: 250%;
+    font-weight: bold;
 }
 
 .personasTexto p {
@@ -206,6 +211,7 @@ SOBRE NOSOTROS
     padding: 8% 0 0;
     font-family: 'Quicksand', 'sans-serif';
     font-size: 200%;
+    font-weight: bold;
 }
 
 .tarjeta p {
