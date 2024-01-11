@@ -30,6 +30,14 @@ a {
     padding:0%;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 30px 16px;
+}
+
+.navbar-toggler {
+    margin: 12px 0;
+}
+
 .navbar-brand {
     display: flex;
     width: 10%;
@@ -39,18 +47,8 @@ a {
     font-family: 'Quicksand', 'sans-serif';
 }
 
-.nav-link {
-    padding: 16px 32px; 
-}
-
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding: 16px 32px;
-    }
-
-    .navbar {
-        padding: 8px;
-    }
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
 }
 
 .nav-link.active {
@@ -58,6 +56,10 @@ a {
     background-color: #FDCDCD;
     font-weight: bold;
 
+}
+
+.navbar-brand {
+    padding: 12px 0;
 }
 
 
