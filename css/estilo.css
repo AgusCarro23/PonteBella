@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-#main {
+main {
     min-height: 100vh;
 }
 
@@ -19,14 +19,16 @@ body {
 		height: 100%;
 	}
 
-a {
-        font-style: none;
-        text-decoration: none;
-        color:white;
-    }
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+MODIFICACIONES DE BARRA DE NAVEGACION- BOOTSTRAP
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .navbar {
-    background-color: #232323;
     padding:0%;
 }
 
@@ -63,38 +65,36 @@ a {
 }
 
 
-/* nav ul {
-    margin:0%;
-}
 
-header nav ul li{
-    display: inline-block;
-    padding: 20px;
-    color: white;
-    font-family: 'Quicksand', 'sans-serif';
 
-} */
 
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+FOOTER
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 50px;
     width: 100%;
-    height: 164px;
+    /*height: 164px;*/
     background-color: #232323;
+    grid-template-areas: 
+    "footerLogo footerAdress footerMedia";
+    padding: 20px 0; 
 }
 
 footer h6 {
     font-family:'Quicksand', 'sans-serif';
-    font-size: 100%;
+    font-size: 1.4vw;
     color: white;
     padding: 3% 0;
 }
 
 .footerAdress {
+    grid-area: footerAdress;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,44 +102,52 @@ footer h6 {
 
 .footerAdress img {
     display: inline-block;
-    width: 70px;
-    padding: 1%;
+    width: 6vw;
+    margin-right: 20px;
 
 }   
 
-.footerAdress .texto {
-    display: inline-block;
-    height: 15%;
-}
 
 footer p {
     font-family:'sans-serif', 'Calibri';
     color: #9e9e9e;
+    margin: 0;
+    font-size: 1.5vw;
 
 }
 
 .footerLogo {
+    grid-area: footerLogo;
     display: inline-block;
-    width: fit-content;
 }
 
 .footerLogo img{
     padding-left: 5%;
-    width: 40%;
+    width: 60%;
 }
 
 .footerMedia {
-    width: 30%;
+    grid-area: footerMedia;
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .footerMedia a {
-    padding: 5%;
+    padding: 2%;
+    text-decoration: none;
+}
+
+.footerMedia svg {
+    max-width: 80px;
+    width: 90%;
+    margin-right: 15%;
 }
 
 
-.footerAdress {
-    width: 30%;
-}
+
+
+
 
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -149,6 +157,8 @@ INDEX
 .bannerDesktop {
     display: inline-block;
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 
@@ -181,7 +191,6 @@ SOBRE NOSOTROS
 }
 
 .local img {
-    /*display: inline-block;*/
     border: 1.5vh solid #ffffff;
     padding: 10px;
     border-radius: 50%;
@@ -191,7 +200,6 @@ SOBRE NOSOTROS
 }
 
 .personasTexto {
-    /*display: inline-block;*/
     padding: 5% 0 5% 5%;
     width: 59%;
 
@@ -370,4 +378,22 @@ SOBRE NOSOTROS
 }  
     
 
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////
+MEDIA QUERIES
+///////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 965px) {
+
+/*Correccion de footerMedia*/
+
+.footerMedia svg {
+    max-width: 60px;
+}
+
+.footerLogo img {
+    margin: 10px;
+}
 }
