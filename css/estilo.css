@@ -291,9 +291,11 @@ Catalogo- PRENDAS y ACCESORIOS
     display: grid;
     gap: 3vw;
     grid-template-columns: repeat(4, 1fr);
-
-
 }
+
+
+
+/*////////////////////////////////////////////////////////////                                  CARTA ORIGINAL*/ 
 
 .catalogCard {
     display: flex;
@@ -365,8 +367,47 @@ p.catalogCard__text__secondary {
 
 
 
+/*////////////////////////////////////////////////////////////                              CARTA VARIANTE*/
 
+.catalogGrid.variant {
+    grid-template-columns: repeat(3, 1fr);
+    
+}
 
+.catalogCard.variant {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: auto;
+
+}
+
+.variant .catalogCard__text{
+    padding: 1.4vw;
+}
+
+.variant .catalogCard__text h2{
+    font-size: 1.6vw;
+}
+
+.catalogCard__text p {
+    font-size: 1vw;
+}
+
+p.catalogCard__text__secondary {
+    font-size: 1vw;
+    margin-bottom: 1rem;
+}
+
+.variant .catalogCard__bottom {
+    margin-top: auto;
+    flex-direction: column;
+}
+
+.variant .buttonReserve {  
+    padding: 0.8vw;
+    font-size: 1vw;
+    margin: 0;
+}
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////
@@ -410,7 +451,7 @@ MEDIA QUERIES                                                                   
 
 
 
-/* Prendas y Accesorios */
+/* Prendas */
 
 .catalogGrid {    
     gap: 3vw;
@@ -435,9 +476,39 @@ MEDIA QUERIES                                                                   
     font-size: 1.4vw;
 }
 
+
+
+
+
+/*////////////////////////////////////////////////////////////                              CARTA VARIANTE*/
+
+.catalogGrid.variant {
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.variant .catalogCard__text{
+    padding: 2vw;
+}
+
+.variant .catalogCard__text h2{
+    font-size: 2.4vw;
+}
+
+.catalogCard__text p {
+    font-size: 2vw;
+}
+
+p.catalogCard__text__secondary {
+    font-size: 1.4vw;
+}
+
 }
 
 
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media only screen and (max-width: 965px) and (min-width: 769px) {
 
@@ -660,5 +731,38 @@ Catalogo- PRENDAS y ACCESORIOS
         padding: 2vw 3vw;
         font-size: 2vw;
     }
+
+
+
+/*////////////////////////////////////////////////////////////                              CARTA VARIANTE*/
+
+.catalogGrid.variant {
+    grid-template-columns: 1fr;
+    
+}
+
+.variant .catalogCard__text{
+    padding: 5vw;
+}
+
+.variant .catalogCard__text h2{
+    font-size: 5vw;
+}
+
+.catalogCard__text p {
+    font-size: 3vw;
+}
+
+p.catalogCard__text__secondary {
+    font-size: 2vw;
+}
+
+
+.variant .buttonReserve {  
+    padding: 2vw;
+    font-size: 2.4vw;
+    font-weight: bolder;
+    margin: 0;
+}
 
 }
