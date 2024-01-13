@@ -42,27 +42,24 @@
 	</header>
 
 	<main>
-		<h1>Contacto</h1>
-		<section>
-			<article>
+		<section class="contactGrid">
+			<h1>Contacto</h1>
+			<article class="contact__form">
 				<fieldset>
 					<legend>Contactanos</legend>
 					<form action="">
 						<ul>
 							<li>
 								<label for="name">Nombre</label>
-								<br>
-								<input type="text">
+								<input type="text" id="name">
 							</li>
 							<li>
 								<label for="email">E-mail</label>
-								<br>
-								<input type="email">
+								<input type="email" id="email">
 							</li>
 							<li>
 								<label for="msg">Mensaje</label>
-								<br>
-								<textarea name="" id="" cols="20" rows="5"></textarea>
+								<textarea name="msg" id="msg"></textarea>
 							</li>
 						</ul>
 						<input type="reset">
@@ -71,11 +68,48 @@
 				</fieldset>
 			</article>
 			
-			<article>
+			<article class="contact__map">
 			<fieldset>	
 				<legend>Donde encontrarnos</legend>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13157.557260230697!2d-57.8426178!3d-34.4676468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a31314bc73d189%3A0x6a42453457a0eb39!2sPonte%20Bella!5e0!3m2!1ses!2suy!4v1700544024101!5m2!1ses!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13157.557260230697!2d-57.8426178!3d-34.4676468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a31314bc73d189%3A0x6a42453457a0eb39!2sPonte%20Bella!5e0!3m2!1ses!2suy!4v1700544024101!5m2!1ses!2suy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</fieldset>
+			</article>
+
+		</section>
+
+
+		<section class="contactGrid mobile">
+			<h1>Contacto</h1>
+			
+			<article class="contact__map">
+			<fieldset>	
+				<legend>Donde encontrarnos</legend>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13157.557260230697!2d-57.8426178!3d-34.4676468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a31314bc73d189%3A0x6a42453457a0eb39!2sPonte%20Bella!5e0!3m2!1ses!2suy!4v1700544024101!5m2!1ses!2suy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</fieldset>
+			</article>
+
+			<article class="contact__form">
+				<fieldset>
+					<legend>Contactanos</legend>
+					<form action="">
+						<ul>
+							<li>
+								<label for="name">Nombre</label>
+								<input type="text" id="name">
+							</li>
+							<li>
+								<label for="email">E-mail</label>
+								<input type="email" id="email">
+							</li>
+							<li>
+								<label for="msg">Mensaje</label>
+								<textarea name="msg" id="msg"></textarea>
+							</li>
+						</ul>
+						<input type="reset">
+						<input type="submit">
+					</form>
+				</fieldset>
 			</article>
 
 		</section>

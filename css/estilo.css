@@ -17,7 +17,9 @@ body {
 		height: 100%;
 	}
 
-
+main {
+    padding-top: 11.5vh;
+}
 
 
 
@@ -29,6 +31,9 @@ MODIFICACIONES DE BARRA DE NAVEGACION- BOOTSTRAP
 .navbar {
     padding:0%;
     box-shadow: 10px 0 20px #232323;
+    width: 100%;
+    position: fixed;
+    z-index: 101;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -78,7 +83,6 @@ footer {
     grid-template-rows: auto;
     column-gap: 50px;
     width: 100%;
-    /*height: 164px;*/
     background-color: #232323;
     grid-template-areas: 
     "footerLogo footerAdress footerMedia";
@@ -408,6 +412,127 @@ p.catalogCard__text__secondary {
     font-size: 1vw;
     margin: 0;
 }
+
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+Contacto
+/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.contactGrid {
+    padding: 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:5vw
+}
+
+.contactGrid.mobile {
+    display: none;
+}
+
+.contactGrid h1 {
+    display: none;
+}
+
+.contactGrid legend {
+    font-family: 'Quicksand', 'sans-serif';
+    margin-bottom: 2vw;
+    font-size: 3vw;
+    font-weight: bolder;
+    color: #ee314b;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+
+.contact__form ul {
+    padding: 0;
+}
+
+.contact__form li {
+    list-style-type: none;
+}
+
+.contact__form input {
+    width: 100%;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 2vw;
+    border: none;
+    border-bottom: 2px solid #ee314a40;
+}
+
+.contact__form label{
+    font-family: 'sans-serif', 'Calibri';
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+.contact__form textarea {
+    width: 100%;
+    max-height: 130px;
+    min-height: 30px;
+}
+
+.contact__form input[type=reset] {
+    width: 45%;
+    color: #ee314b;
+    background-color: #ffffff;
+    border: 1px solid #ee314b;
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+.contact__form input[type=submit] {
+    width: 45%;
+    float: right;
+    color: white;
+    background-color: #ee314b;
+    box-shadow: 0px 5px 7px #2323234a;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+.contact__map {}
+
+.contact__map iframe {
+    margin-top: 1vw;
+    width: 100%;
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////
@@ -763,6 +888,52 @@ p.catalogCard__text__secondary {
     font-size: 2.4vw;
     font-weight: bolder;
     margin: 0;
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+Contacto
+/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.contactGrid {
+    display: none;
+}
+
+.contactGrid.mobile {
+    padding: 8vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:8vw
+}
+
+.mobile .contact__map iframe{
+    margin-top: none;
+    height: 280px;
+}
+
+.mobile .contact__map legend {
+    display: none;
+}
+
+
+.mobile .contact__form legend {
+    font-size: 8vw;
+}
+
+.mobile .contact__form label {
+    font-size: 4vw;
+}
+
+.mobile .contact__form input[type=reset] {
+    width: 100%;
+    font-size: 3vw;
+}
+
+.mobile .contact__form input[type=submit] {
+    width: 100%;
+    font-size: 3vw;
 }
 
 }
