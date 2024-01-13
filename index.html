@@ -44,9 +44,52 @@
 
 		<main>
 			<section>
-				<article> <!--Carusel de Imagenes-->
-					<img class="bannerDesktop" src="img/Desfile-verano.png" alt="Desfile verano 2023">
-					<img class="bannerMobile" src="img/Desfile-verano-mobile.png" alt="Desfile verano 2023">
+				<article class="bannerDesktop"> <!--Carusel de Imagenes DESKTOP-->
+					<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+						  <div class="carousel-item active" data-bs-interval="8000">
+							<img src="img/home/desktop/Desfile-verano.png" class="d-block w-100" alt="Desfile verano">
+						  </div>
+						  <div class="carousel-item" data-bs-interval="8000">
+							<img src="img/home/desktop/Anda-promocion.png" class="d-block w-100" alt="Promocion ANDA">
+						  </div>
+						  <div class="carousel-item" data-bs-interval="8000"> 
+							<img src="img/home/desktop/Consulta-cosmetologa.png" class="d-block w-100" alt="Evento de cosmetologia">
+						  </div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						  <span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						  <span class="visually-hidden">Next</span>
+						</button>
+					  </div>
+				</article>
+
+				<article class="bannerMobile"> <!--Carusel de Imagenes TABLET/CELULAR-->
+					<div id="carouselExampleInterval1" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+						  <div class="carousel-item active" data-bs-interval="8000">
+							<img src="img/home/mobile/Desfile-verano-mobile.png" class="d-block w-100" alt="Desfile verano">
+						  </div>
+						  <div class="carousel-item" data-bs-interval="8000">
+							<img src="img/home/mobile/Anda-promocion.png" class="d-block w-100" alt="Promocion ANDA">
+						  </div>
+						  <div class="carousel-item" data-bs-interval="8000">
+							<img src="img/home/mobile/Consulta-cosmetologa.png" class="d-block w-100" alt="Evento de cosmetologia">
+						  </div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						  <span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						  <span class="visually-hidden">Next</span>
+						</button>
+					  </div>
 				</article>
 			</section>
 		</main>
