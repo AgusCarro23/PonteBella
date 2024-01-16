@@ -1,0 +1,40 @@
+.navbar {
+    padding:0%;
+    box-shadow: 10px 0 20px #232323;
+    width: 100%;
+    position: fixed;
+    z-index: 101;
+
+    &-expand-lg {
+    
+        .navbar-nav {
+        font-family: 'Quicksand', 'sans-serif';
+        .nav-link {
+            padding: 30px 16px;
+            }
+        }
+        .navbar-collapse {
+            justify-content: end;
+        }
+}
+        
+
+    &-toggler {
+        margin: 12px 0;
+    }
+
+    &-brand {
+        display: flex;
+        width: 10%;
+        padding: 12px 0;
+    }
+
+
+}
+
+.nav-link.active {
+    color: black;
+    background-color: #FDCDCD;
+    font-weight: bold;
+
+}

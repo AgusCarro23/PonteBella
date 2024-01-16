@@ -1,0 +1,127 @@
+/*////////////////////////////////////////////////////////////////////////////////// DESKTOP */
+
+.catalogCard {
+    display: flex;
+    flex-direction: column;
+    border:1px solid #232323;
+    min-height: 400px;
+    box-shadow: 10px 10px 14px 0px #23232354;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        padding: 3vh 2vw;
+
+        h2{
+            font-family: 'Quicksand', 'sans-serif';
+            font-size: 2vw;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: justify;
+            font-family:'sans-serif', 'Calibri';
+            font-size: 1.5vw;
+            margin-bottom: 0;
+        }
+
+        &__secondary {
+            font-size: 1vw;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__bottom {
+        display: inline-flex;
+        box-sizing: content-box;
+        margin-top: 24px;
+
+        h3{
+            font-family:'sans-serif', 'Calibri';
+            font-size: 2vw;
+            margin-top: 10px;
+        }
+    }
+}
+
+.w-100 {
+    object-fit: cover;
+    height: 100%;
+    }
+
+.buttonReserve {
+    margin-left: auto;
+    background-color: #ee314b;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 1vw 1vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    font-family: 'Quicksand', 'sans-serif';
+    }
+
+
+/*////////////////////////////////////////////////////////////////////////////////// TABLET */
+
+@media only screen and (max-width: 965px) {
+
+    .catalog {
+        &Card {
+            &__text {
+                h2 {
+                    font-size: 3vw;
+                }
+
+                p {
+                    font-size: 2vw;
+                }
+            }
+
+            &__bottom {
+                h3{
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+
+    .buttonReserve {
+        padding: 5px 2vw;
+        font-size: 1.4vw;
+    }
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////// MOBILE */
+
+@media only screen and (max-width: 768px) {
+    .catalog {
+        &Card 
+            {&__text {
+                padding: 3vh 4vw;
+
+                h2{
+                    font-size: 5vw;
+                }
+
+                p {
+                    font-size: 3vw;
+                }
+            }
+
+            &__bottom {
+                h3{
+                font-size: 5vw;
+                }
+            }
+        }
+    }
+
+    .buttonReserve {
+        padding: 2vw 3vw;
+        font-size: 2vw;
+    }
+}

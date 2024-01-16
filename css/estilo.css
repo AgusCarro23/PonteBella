@@ -6,9 +6,7 @@
     box-sizing: border-box;
 }
 
-#main {
-    min-height: 100vh;
-}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300&family=Sacramento&family=Source+Sans+Pro:wght@200&display=swap');
 
@@ -19,49 +17,87 @@ body {
 		height: 100%;
 	}
 
-a {
-        font-style: none;
-        text-decoration: none;
-    }
-
-nav {
-    background-color: #232323;
-    
+main {
+    padding-top: 11.5vh;
 }
 
 
-nav ul {
-    margin:0%;
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+MODIFICACIONES DE BARRA DE NAVEGACION- BOOTSTRAP
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.navbar {
+    padding:0%;
+    box-shadow: 10px 0 20px #232323;
+    width: 100%;
+    position: fixed;
+    z-index: 101;
 }
 
-header nav ul li{
-    display: inline-block;
-    padding: 20px;
-    color: white;
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 30px 16px;
+}
+
+.navbar-toggler {
+    margin: 12px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    width: 10%;
+}
+
+.navbar-nav {
     font-family: 'Quicksand', 'sans-serif';
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+}
+
+.nav-link.active {
+    color: black;
+    background-color: #FDCDCD;
+    font-weight: bold;
 
 }
 
+.navbar-brand {
+    padding: 12px 0;
+}
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+FOOTER
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 50px;
     width: 100%;
-    height: 164px;
     background-color: #232323;
+    grid-template-areas: 
+    "footerLogo footerAdress footerMedia";
+    padding: 20px 0; 
 }
 
 footer h6 {
     font-family:'Quicksand', 'sans-serif';
-    font-size: 100%;
+    font-size: max( 1.4vw, 14.5px);
     color: white;
     padding: 3% 0;
 }
 
 .footerAdress {
+    grid-area: footerAdress;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,44 +105,65 @@ footer h6 {
 
 .footerAdress img {
     display: inline-block;
-    width: 70px;
-    padding: 1%;
+    width: 6vw;
+    margin-right: 20px;
 
 }   
 
-.footerAdress .texto {
-    display: inline-block;
-    height: 15%;
-}
 
 footer p {
     font-family:'sans-serif', 'Calibri';
     color: #9e9e9e;
+    margin: 0;
+    font-size: max( 1.5vw, 12px);
 
 }
 
 .footerLogo {
+    grid-area: footerLogo;
     display: inline-block;
-    width: fit-content;
 }
 
 .footerLogo img{
     padding-left: 5%;
-    width: 40%;
+    width: 60%;
 }
 
 .footerMedia {
-    width: 30%;
+    grid-area: footerMedia;
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 5%;
 }
 
 .footerMedia a {
-    padding: 5%;
+    padding: 2%;
+    text-decoration: none;
+}
+
+.footerMedia svg {
+    max-width: 80px;
+    width: max( 20px, 75%);
+    margin-right: 15%;
 }
 
 
-.footerAdress {
-    width: 30%;
+.mediaText {
+    display: flex;
+    align-items: center;
 }
+
+.mediaText p {
+    display: none;
+    font-family: 'Quicksand', 'sans-serif';
+    color: #9e9e9e;
+    font-size: 3vw;
+    font-weight: bolder;
+    align-items: start;
+}
+
+
 
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -114,8 +171,10 @@ INDEX
 /////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .bannerDesktop {
-    display: inline-block;
+    display: flex;
     width: 100%;
+    object-fit: contain;
+    box-sizing: content-box;
 }
 
 
@@ -148,7 +207,6 @@ SOBRE NOSOTROS
 }
 
 .local img {
-    /*display: inline-block;*/
     border: 1.5vh solid #ffffff;
     padding: 10px;
     border-radius: 50%;
@@ -158,7 +216,6 @@ SOBRE NOSOTROS
 }
 
 .personasTexto {
-    /*display: inline-block;*/
     padding: 5% 0 5% 5%;
     width: 59%;
 
@@ -189,6 +246,11 @@ SOBRE NOSOTROS
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.tablet {
+    display: none;
+    flex-direction: column;
 }
 
 
@@ -224,117 +286,655 @@ SOBRE NOSOTROS
 
 
 
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 768px) {
-    
-    .bannerDesktop {
-        display: none;
-    }
-    
-    
-    .bannerMobile {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-    }
-
-    
 /*//////////////////////////////////////////////////////////////////////////////////////////////////
-SOBRE NOSOTROS
+Catalogo- PRENDAS y ACCESORIOS
 /////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-#sobreNosotros {
-    align-items: center;
-    justify-content: center;
+.catalogGrid {    
+    padding: 4vw;
+    display: grid;
+    gap: 3vw;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 
-.local {
-    padding: 10% 5% 5%;
+
+/*////////////////////////////////////////////////////////////                                  CARTA ORIGINAL*/ 
+
+.catalogCard {
     display: flex;
+    flex-direction: column;
+    border:1px solid #232323;
+    min-height: 400px;
+    box-shadow: 10px 10px 14px 0px #23232354;
+}
+
+.w-100 {
+    height: 100%;
+}
+
+img.w-100 {
+    object-fit: cover;
+}
+
+
+.catalogCard__text {
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 2vw;
+
+}
+
+.catalogCard__text h2{
+    font-family: 'Quicksand', 'sans-serif';
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.catalogCard__text p {
+    text-align: justify;
+    font-family:'sans-serif', 'Calibri';
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+
+p.catalogCard__text__secondary {
+    font-size: 1vw;
+    margin-bottom: 1rem;
+}
+
+.catalogCard__bottom {
+    display: inline-flex;
+    box-sizing: content-box;
+    margin-top: 24px;
+}
+
+.catalogCard__bottom h3{
+    font-family:'sans-serif', 'Calibri';
+    font-size: 2vw;
+    margin-top: 10px;
+}
+
+.buttonReserve {
+    margin-left: auto;
+    background-color: #ee314b;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 1vw 1vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+
+
+/*////////////////////////////////////////////////////////////                              CARTA VARIANTE*/
+
+.catalogGrid.variant {
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.catalogCard.variant {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: auto;
+
+}
+
+.variant .catalogCard__text{
+    padding: 1.4vw;
+}
+
+.variant .catalogCard__text h2{
+    font-size: 1.6vw;
+}
+
+.catalogCard__text p {
+    font-size: 1vw;
+}
+
+p.catalogCard__text__secondary {
+    font-size: 1vw;
+    margin-bottom: 1rem;
+}
+
+.variant .catalogCard__bottom {
+    margin-top: auto;
     flex-direction: column;
 }
 
-.local img {
-    /*display: inline-block;*/
-    border: 1.5vh solid #ffffff;
-    padding: 10px;
-    border-radius: 15%;
-    width: 90%;
-    object-fit: cover;
-    aspect-ratio: 1/1;
+.variant .buttonReserve {  
+    padding: 0.8vw;
+    font-size: 1vw;
+    margin: 0;
 }
 
-.personasTexto {
-    /*display: inline-block;*/
-    padding: 10px;
-    width: 90%;
 
 
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+Contacto
+/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.contactGrid {
+    padding: 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:5vw
 }
+
+.contactGrid.mobile {
+    display: none;
+}
+
+.contactGrid h1 {
+    display: none;
+}
+
+.contactGrid legend {
+    font-family: 'Quicksand', 'sans-serif';
+    margin-bottom: 2vw;
+    font-size: 3vw;
+    font-weight: bolder;
+    color: #ee314b;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+
+.contact__form ul {
+    padding: 0;
+}
+
+.contact__form li {
+    list-style-type: none;
+}
+
+.contact__form input {
+    width: 100%;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 2vw;
+    border: none;
+    border-bottom: 2px solid #ee314a40;
+}
+
+.contact__form label{
+    font-family: 'sans-serif', 'Calibri';
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+.contact__form textarea {
+    width: 100%;
+    max-height: 130px;
+    min-height: 30px;
+}
+
+.contact__form input[type=reset] {
+    width: 45%;
+    color: #ee314b;
+    background-color: #ffffff;
+    border: 1px solid #ee314b;
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+.contact__form input[type=submit] {
+    width: 45%;
+    float: right;
+    color: white;
+    background-color: #ee314b;
+    box-shadow: 0px 5px 7px #2323234a;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+.contact__map iframe {
+    border: 1px solid #232323;
+    padding: 5%;
+    margin-top: 1vw;
+    width: 100%;
+    height: 400px;
+    box-shadow: 0px 5px 7px #2323234a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////
+MEDIA QUERIES                                                                              TABLET
+///////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 965px) {
+
+/*Correccion de footerMedia*/
+
+.footerMedia svg {
+    max-width: 60px;
+}
+
+.footerLogo img {
+    margin: 10px;
+}
+
+
+
+/* Sobre Nosotros */
 
 .personasTexto h2 {
-    padding: 20px 0;
-    font-family: 'Quicksand', 'sans-serif';
     font-size: 200%;
 }
 
 .personasTexto p {
-    padding: 10px 0;
-    text-align: justify;
-    font-family:'sans-serif', 'Calibri';
-    font-size: 90%;
+    font-size: 80%;
 }
 
-
-
-
-
-.equipo {
-    width: 100%;
-    padding: 10% 5%;
+.tablet {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}
+
+.desktop-mobile {
+    display: none;
 }
 
 
-.tarjeta {
-    width: 90%;
-    margin: 15px;
-    padding: 10%;
-    background: white;
-    border-radius: 50px;
 
+
+
+
+/* Prendas */
+
+.catalogGrid {    
+    gap: 3vw;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.tarjeta img {
-    border-radius: 50px;
-    width: 100%;
-    object-fit: cover;
-    aspect-ratio: 1/1;
-}
-.tarjeta h3 {
-    padding: 8% 0 0;
-    font-family: 'Quicksand', 'sans-serif';
-    font-size: 200%;
+
+.catalogCard__text h2{
+    font-size: 3vw;
 }
 
-.tarjeta p {
-    text-align: justify;
-    font-family:'sans-serif', 'Calibri';
-    font-size: 100%;
-    padding: 8% 0 0;
-}  
+.catalogCard__text p {
+    font-size: 2vw;
+}
+
+.catalogCard__bottom h3{
+    font-size: 3vw;
+}
+
+.buttonReserve {
+    padding: 5px 2vw;
+    font-size: 1.4vw;
+}
+
+
+
+
+
+/*////////////////////////////////////////////////////////////                              CARTA VARIANTE*/
+
+.catalogGrid.variant {
+    grid-template-columns: repeat(2, 1fr);
     
+}
+
+.variant .catalogCard__text{
+    padding: 2vw;
+}
+
+.variant .catalogCard__text h2{
+    font-size: 2.4vw;
+}
+
+.catalogCard__text p {
+    font-size: 2vw;
+}
+
+p.catalogCard__text__secondary {
+    font-size: 1.4vw;
+}
+
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 965px) and (min-width: 769px) {
+
+.tablet .tarjeta {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    "image text";
+    width: 100%;
+    gap: 5vw;
+}
+
+.tablet .tarjeta .card__text {
+    grid-area: text;
+
+}
+
+.tablet .tarjeta img {
+    height: 100%;
+}
+
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////
+MEDIA QUERIES                                                                             CELULAR
+///////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media only screen and (max-width: 768px) {
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+    FOOTER
+/////////////////////////////////////////////////////////////////////////////////////////////////*/  
+    
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 50px;
+        width: 100%;
+        background-color: #232323;
+        grid-template-areas: 
+        "footerLogo footerAdress"
+        "footerMedia footerMedia";
+        padding: 20px 0; 
+    }
+    
+    footer h6 {
+        font-size: 2.2vw;
+    }
+    
+    footer p {
+        font-size: 2vw;
+    }
+    
+    .footerMedia {
+        grid-area: footerMedia;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 3vw;
+        margin-top: 30px;
+    }
+    
+    
+    .footerAdress {
+            grid-area: footerAdress;
+            justify-content: flex-start;
+            margin: 10px;
+    }
+    
+    
+    .mediaText p {
+        display: block;}
+    
+        
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+    INDEX
+/////////////////////////////////////////////////////////////////////////////////////////////////*/    
+        
+    .bannerDesktop {
+            display: none;
+        }
+        
+        
+    .bannerMobile {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    
+        
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+    SOBRE NOSOTROS
+/////////////////////////////////////////////////////////////////////////////////////////////////*/
+    
+    #sobreNosotros {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .local {
+        padding: 10% 5% 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .local img {
+        /*display: inline-block;*/
+        border: 1.5vh solid #ffffff;
+        padding: 10px;
+        border-radius: 15%;
+        width: 90%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+    
+    .personasTexto {
+        /*display: inline-block;*/
+        padding: 10px;
+        width: 90%;
+    
+    
+    }
+    
+    .personasTexto h2 {
+        padding: 20px 0;
+        font-family: 'Quicksand', 'sans-serif';
+        font-size: 200%;
+    }
+    
+    .personasTexto p {
+        padding: 10px 0;
+        text-align: justify;
+        font-family:'sans-serif', 'Calibri';
+        font-size: 90%;
+    }
+    
+    
+    
+    
+    
+    .equipo {
+        width: 100%;
+        padding: 10% 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .tablet {
+        display: none;
+    }
+    
+    .desktop-mobile {
+        display: flex;
+    }
+    
+    
+    .tarjeta {
+        width: 90%;
+        margin: 15px;
+        padding: 10%;
+        background: white;
+        border-radius: 50px;
+    
+    }
+    
+    .tarjeta img {
+        border-radius: 50px;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+    .tarjeta h3 {
+        padding: 8% 0 0;
+        font-family: 'Quicksand', 'sans-serif';
+        font-size: 200%;
+    }
+    
+    .tarjeta p {
+        text-align: justify;
+        font-family:'sans-serif', 'Calibri';
+        font-size: 100%;
+        padding: 8% 0 0;
+    }  
+        
+
+    
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+Catalogo- PRENDAS y ACCESORIOS
+/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+    .catalogGrid {    
+        gap: 3vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalogCard__text {
+        padding: 3vh 4vw;
+    }
+
+    .catalogCard__text h2{
+        font-size: 5vw;
+    }
+    
+    .catalogCard__text p {
+        font-size: 3vw;
+    }
+
+    .catalogCard__bottom h3{
+        font-size: 5vw;
+    }
+
+    .buttonReserve {
+        padding: 2vw 3vw;
+        font-size: 2vw;
+    }
+
+
+
+/*////////////////////////////////////////////////////////////                              CARTA VARIANTE*/
+
+.catalogGrid.variant {
+    grid-template-columns: 1fr;
+    
+}
+
+.variant .catalogCard__text{
+    padding: 5vw;
+}
+
+.variant .catalogCard__text h2{
+    font-size: 5vw;
+}
+
+.catalogCard__text p {
+    font-size: 3vw;
+}
+
+p.catalogCard__text__secondary {
+    font-size: 2vw;
+}
+
+
+.variant .buttonReserve {  
+    padding: 2vw;
+    font-size: 2.4vw;
+    font-weight: bolder;
+    margin: 0;
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+Contacto
+/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.contactGrid {
+    display: none;
+}
+
+.contactGrid.mobile {
+    padding: 8vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:8vw
+}
+
+.mobile .contact__map iframe{
+    margin-top: none;
+    height: 400px;
+}
+
+.mobile .contact__map legend {
+    display: none;
+}
+
+
+.mobile .contact__form legend {
+    font-size: 8vw;
+}
+
+.mobile .contact__form label {
+    font-size: 4vw;
+}
+
+.mobile .contact__form input[type=reset] {
+    width: 100%;
+    font-size: 3vw;
+}
+
+.mobile .contact__form input[type=submit] {
+    width: 100%;
+    font-size: 3vw;
+}
 
 }
