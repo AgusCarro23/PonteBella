@@ -1,0 +1,39 @@
+
+
+.catalogGrid {    
+    padding: 4vw;
+    display: grid;
+    gap: 3vw;
+    grid-template-columns: repeat(4, 1fr);
+
+    &.variant {
+        grid-template-columns: repeat(3, 1fr);     
+    }
+}
+
+@media only screen and (max-width: 965px) {
+    .catalog {
+        &Grid {    
+            gap: 3vw;
+            grid-template-columns: repeat(3, 1fr);
+
+            &.variant {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .catalog {
+        &Grid {    
+            gap: 3vw;
+            grid-template-columns: repeat(2, 1fr);
+
+            &.variant {
+                grid-template-columns: 1fr;   
+            }
+        }
+    }
+}
