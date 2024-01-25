@@ -29,6 +29,15 @@
         padding: 0.8vw;
         font-size: 1vw;
         margin: 0;
+    
+        &:hover {
+            font-weight: bolder;
+            box-shadow: rgba(35, 35, 35, 0.33) 0px 1vh 5px 0px;
+            transform: translateY(-4px);
+        }
+    
+
+
     }
 }
 
