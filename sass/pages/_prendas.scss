@@ -50,6 +50,7 @@
     }
 
 .buttonReserve {
+    transition: ease-in-out 0.2s;
     margin-left: auto;
     background-color: #ee314b;
     border: none;
@@ -59,8 +60,15 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
+    font-size: 0.8vw;
     font-family: 'Quicksand', 'sans-serif';
+    font-weight: bold;
+
+    &:hover {
+        font-weight: bolder;
+        box-shadow: rgba(35, 35, 35, 0.33) 0px 1vh 5px 0px;
+        transform: translateY(-4px);
+    }
     }
 
 

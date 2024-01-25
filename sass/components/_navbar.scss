@@ -32,9 +32,20 @@
 
 }
 
-.nav-link.active {
-    color: black;
-    background-color: #FDCDCD;
-    font-weight: bold;
+.nav-link {
+    transition: ease-in-out 0.2s;
+    
+    &.active {
+        color: black;
+        background-color: #FDCDCD;
+        font-weight: bold;
 
+        &:hover {
+            background-color: #FDCDCD;
+        }
+    }
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
 }

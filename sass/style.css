@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  padding-top: 11.5vh;
+  padding-top: 85px;
 }
 
 .navbar {
@@ -39,10 +39,19 @@ main {
   padding: 12px 0;
 }
 
+.nav-link {
+  transition: ease-in-out 0.2s;
+}
 .nav-link.active {
   color: black;
   background-color: #FDCDCD;
   font-weight: bold;
+}
+.nav-link.active:hover {
+  background-color: #FDCDCD;
+}
+.nav-link:hover {
+  background-color: #f0f0f0;
 }
 
 /*////////////////////////////////////////////////////////////////////////////////// DESKTOP */
@@ -450,6 +459,7 @@ footer p {
 }
 
 .buttonReserve {
+  transition: ease-in-out 0.2s;
   margin-left: auto;
   background-color: #ee314b;
   border: none;
@@ -459,8 +469,14 @@ footer p {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.2vw;
+  font-size: 0.8vw;
   font-family: "Quicksand", "sans-serif";
+  font-weight: bold;
+}
+.buttonReserve:hover {
+  font-weight: bolder;
+  box-shadow: rgba(35, 35, 35, 0.33) 0px 1vh 5px 0px;
+  transform: translateY(-4px);
 }
 
 /*////////////////////////////////////////////////////////////////////////////////// TABLET */
@@ -522,6 +538,11 @@ footer p {
   padding: 0.8vw;
   font-size: 1vw;
   margin: 0;
+}
+.variant .buttonReserve:hover {
+  font-weight: bolder;
+  box-shadow: rgba(35, 35, 35, 0.33) 0px 1vh 5px 0px;
+  transform: translateY(-4px);
 }
 
 /*////////////////////////////////////////////////////////////////////////////////// TABLET */
