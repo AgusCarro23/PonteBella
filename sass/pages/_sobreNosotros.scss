@@ -59,6 +59,7 @@
 
 .tarjeta {
     width: 30%;
+    min-height: 660px;
     margin: 15px;
     padding: 4%;
     background: white;
@@ -99,6 +100,10 @@
         p {
             font-size: 80%;
         }
+    }
+
+    .tarjeta {
+        min-height: 200px;
     }
 
     .tablet {
