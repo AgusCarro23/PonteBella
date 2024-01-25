@@ -478,6 +478,11 @@ footer p {
   box-shadow: rgba(35, 35, 35, 0.33) 0px 1vh 5px 0px;
   transform: translateY(-4px);
 }
+.buttonReserve:active {
+  background-color: #f11431;
+  box-shadow: none;
+  transform: translateY(0px);
+}
 
 /*////////////////////////////////////////////////////////////////////////////////// TABLET */
 @media only screen and (max-width: 965px) {
